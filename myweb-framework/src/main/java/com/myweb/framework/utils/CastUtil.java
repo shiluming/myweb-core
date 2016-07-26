@@ -1,5 +1,6 @@
 package com.myweb.framework.utils;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -146,4 +147,82 @@ public class CastUtil {
         return castBoolean(obj,false);
     }
 
+    /**
+     * 转为 String[] 数组
+     * @param objArrays
+     * @return
+     */
+    public static String[] castStringArray(Object[] objArrays) {
+        if(objArrays == null) {
+                objArrays = new Object[0];
+        }
+        String[] strArray = new String[objArrays.length];
+        if(ArrayUtils.isNotEmpty(objArrays)) {
+            for(int i=0;i<objArrays.length;i++) {
+                strArray[i] = castString(objArrays[i]);
+            }
+        }
+        return strArray;
+
+    }
+
+    /**
+     * 转为 double 数组
+     * @param objArrays
+     * @return
+     */
+    public static double[] castDoubleArray(Object[] objArrays) {
+        if(objArrays == null) {
+            objArrays = new Object[0];
+        }
+        double[] doubleArray = new double[objArrays.length];
+        if(ArrayUtils.isNotEmpty(objArrays)) {
+
+            for(int i=0;i<objArrays.length;i++) {
+                doubleArray[i] = castDouble(objArrays[i]);
+            }
+        }
+        return doubleArray;
+    }
+
+    public static long[] castLongArray(Object[] objArrays) {
+        if(objArrays == null) {
+            objArrays = new Object[0];
+        }
+        long[] longArray = new long[objArrays.length];
+        if(ArrayUtils.isNotEmpty(objArrays)) {
+
+            for(int i=0;i<objArrays.length;i++) {
+                longArray[i] = castLong(objArrays[i]);
+            }
+        }
+        return longArray;
+
+    }
+
+    public static int[] castIntArray(Object[] objArray) {
+        if(objArray == null) {
+            objArray = new Object[0];
+        }
+        int[] intArray = new int[objArray.length];
+        if(ArrayUtil.isNotEmpty(objArray)) {
+            for(int i=0;i<objArray.length;i++) {
+                intArray[i] = castInt(objArray[i]);
+            }
+        }
+        return intArray;
+    }
+
+    public static boolean[] castBooleanArray(Object[] objArray) {
+        if(objArray == null) {
+            objArray = new Object[0];
+        }
+        boolean[] booleanArray = new boolean[objArray.length];
+        if(ArrayUtil.isNotEmpty(objArray)) {
+            for(int i=0;i<objArray.length;i++) {
+                booleanArray[i] = castBoolean(objArray[i]);
+            }
+        }
+        return booleanArray;
+    }
 }
