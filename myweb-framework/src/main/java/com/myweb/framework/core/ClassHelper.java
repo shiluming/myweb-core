@@ -9,4 +9,6 @@ import com.myweb.framework.helper.ConfigHelper;
 public class ClassHelper {
 
     private static final String basePackage = ConfigHelper.getAppBasePackage();
+
+
 }
