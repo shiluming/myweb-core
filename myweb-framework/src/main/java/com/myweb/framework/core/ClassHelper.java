@@ -8,7 +8,11 @@ import com.myweb.framework.helper.ConfigHelper;
  */
 public class ClassHelper {
 
+    /**
+     * 获取基础包名
+     */
     private static final String basePackage = ConfigHelper.getAppBasePackage();
 
+//    private static final ClassScanner classScanner = new
 
 }
